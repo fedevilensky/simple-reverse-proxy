@@ -17,12 +17,15 @@ func main() {
 	}
 
 	var config SimpleProxy
-	loadConfig(&config, path)
+	err := loadConfig(&config, path)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	subdomains := loadHandlers(&config)
 
 	log.Printf("Starting server on port %d\n", config.Port)
-	err := http.ListenAndServe(fmt.Sprintf(":%d", config.Port), subdomains)
+	err = http.ListenAndServe(fmt.Sprintf(":%d", config.Port), subdomains)
 	if err != nil {
 		log.Fatal(err)
 	}
