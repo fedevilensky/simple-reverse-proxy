@@ -1,0 +1,9 @@
+---
+port: 8081
+routes:
+  - subdomain: away
+    to: http://myurl/
+  - subdomain: home
+    to: http://127.0.0.1/
+  - subdomain: farfaraway
+    to: http://anotherurl:port/from/here/
