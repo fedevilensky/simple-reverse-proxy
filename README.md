@@ -1,4 +1,4 @@
-Table of Contentes:
+Table of Contents:
 - [Simple Reverse Proxy](#simple-reverse-proxy)
   - [Configuration](#configuration)
 
